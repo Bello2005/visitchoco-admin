@@ -1,0 +1,106 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        niebla:  'var(--niebla)',
+        surface: 'var(--surface)',
+        accent:  'var(--accent)',
+        'accent-bg': 'var(--accent-bg)',
+        'accent-fg': 'var(--accent-fg)',
+        carbon: {
+          50:  'var(--carbon-50)',
+          100: 'var(--carbon-100)',
+          200: 'var(--carbon-200)',
+          300: 'var(--carbon-300)',
+          400: 'var(--carbon-400)',
+          500: 'var(--carbon-500)',
+          600: 'var(--carbon-600)',
+          700: 'var(--carbon-700)',
+          800: 'var(--carbon-800)',
+          900: 'var(--carbon-900)',
+          950: 'var(--carbon-950)',
+        },
+        atrato: {
+          50:  'var(--atrato-50)',
+          100: 'var(--atrato-100)',
+          200: 'var(--atrato-200)',
+          300: 'var(--atrato-300)',
+          400: 'var(--atrato-400)',
+          500: 'var(--atrato-500)',
+          600: 'var(--atrato-600)',
+          700: 'var(--atrato-700)',
+          800: 'var(--atrato-800)',
+          900: 'var(--atrato-900)',
+          950: 'var(--atrato-950)',
+        },
+        chirimia: {
+          50:  'var(--chirimia-50)',
+          100: 'var(--chirimia-100)',
+          200: 'var(--chirimia-200)',
+          300: 'var(--chirimia-300)',
+          400: 'var(--chirimia-400)',
+          500: 'var(--chirimia-500)',
+          600: 'var(--chirimia-600)',
+          700: 'var(--chirimia-700)',
+          800: 'var(--chirimia-800)',
+          900: 'var(--chirimia-900)',
+        },
+      },
+      spacing: {
+        sidebar: '14rem',
+        'sidebar-collapsed': '4rem',
+        topbar: '3rem',
+      },
+      height: { topbar: '3rem' },
+      width:  { sidebar: '14rem' },
+      zIndex: {
+        topbar:  '100',
+        sidebar: '90',
+        drawer:  '200',
+        dialog:  '300',
+        toast:   '400',
+      },
+      fontFamily: {
+        display: ['Fraunces Variable', 'Georgia', 'serif'],
+        sans:    ['Geist', 'system-ui', 'sans-serif'],
+        mono:    ['Geist Mono', 'ui-monospace', 'monospace'],
+      },
+      borderRadius: {
+        sm:  'var(--radius-sm)',
+        DEFAULT: 'var(--radius)',
+        md:  'var(--radius-md)',
+        lg:  'var(--radius-lg)',
+        xl:  'var(--radius-xl)',
+      },
+      boxShadow: {
+        sm:    'var(--shadow-sm)',
+        DEFAULT:'var(--shadow)',
+        lift:  'var(--shadow-lift)',
+        modal: 'var(--shadow-modal)',
+      },
+      animation: {
+        'fade-in':       'fade-in 150ms ease-out',
+        'slide-in-right':'slide-in-right 280ms cubic-bezier(0.32,0.72,0,1)',
+        'slide-in-left': 'slide-in-left 280ms cubic-bezier(0.32,0.72,0,1)',
+      },
+      keyframes: {
+        'fade-in': {
+          from: { opacity: '0' },
+          to:   { opacity: '1' },
+        },
+        'slide-in-right': {
+          from: { transform: 'translateX(100%)' },
+          to:   { transform: 'translateX(0)' },
+        },
+        'slide-in-left': {
+          from: { transform: 'translateX(-100%)' },
+          to:   { transform: 'translateX(0)' },
+        },
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+}
+

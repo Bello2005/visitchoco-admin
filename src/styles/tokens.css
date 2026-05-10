@@ -1,0 +1,80 @@
+/* ─── VISITCHOCÓ ADMIN — Design Tokens ─────────────────────────────────────
+   Sistema Atrato · OKLCH · idéntico al frontend público
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --niebla:           oklch(98.5% 0.004 80);   /* off-white cálido */
+  --surface:          oklch(100% 0 0);           /* blanco puro (cards) */
+  --surface-raised:   oklch(99% 0.003 80);       /* modals, popovers */
+  --surface-sunken:   oklch(96.5% 0.005 80);     /* inputs, code blocks */
+
+  /* Carbon — tipografía y bordes */
+  --carbon-50:  oklch(97.5% 0.003 250);
+  --carbon-100: oklch(94%   0.005 250);
+  --carbon-200: oklch(88%   0.007 250);
+  --carbon-300: oklch(79%   0.009 250);
+  --carbon-400: oklch(68%   0.010 250);
+  --carbon-500: oklch(56%   0.011 250);
+  --carbon-600: oklch(44%   0.012 250);
+  --carbon-700: oklch(33%   0.013 250);
+  --carbon-800: oklch(22%   0.013 250);
+  --carbon-900: oklch(13%   0.012 250);   /* texto principal */
+  --carbon-950: oklch(8%    0.010 250);
+
+  /* Atrato — verde principal */
+  --atrato-50:  oklch(97%  0.020 160);
+  --atrato-100: oklch(93%  0.040 160);
+  --atrato-200: oklch(86%  0.065 160);
+  --atrato-300: oklch(76%  0.090 160);
+  --atrato-400: oklch(64%  0.105 160);
+  --atrato-500: oklch(54%  0.115 160);
+  --atrato-600: oklch(44%  0.110 160);
+  --atrato-700: oklch(36%  0.100 155);   /* verde oscuro — logo, CTA */
+  --atrato-800: oklch(28%  0.085 155);
+  --atrato-900: oklch(21%  0.068 155);
+  --atrato-950: oklch(14%  0.050 155);
+
+  /* Chirimía — naranja/amber */
+  --chirimia-50:  oklch(97.5% 0.020  60);
+  --chirimia-100: oklch(94%   0.045  60);
+  --chirimia-200: oklch(88%   0.080  60);
+  --chirimia-300: oklch(80%   0.110  58);
+  --chirimia-400: oklch(72%   0.130  55);
+  --chirimia-500: oklch(64%   0.145  52);   /* naranja principal */
+  --chirimia-600: oklch(55%   0.135  50);
+  --chirimia-700: oklch(45%   0.115  48);
+  --chirimia-800: oklch(35%   0.090  48);
+  --chirimia-900: oklch(26%   0.068  48);
+
+  /* Accent (alias del atrato-700 — cambia el tema aquí) */
+  --accent:     var(--atrato-700);
+  --accent-bg:  oklch(from var(--atrato-700) l c h / 0.08);
+  --accent-fg:  var(--atrato-700);
+
+  /* Bordes */
+  --border:       oklch(from var(--carbon-900) l c h / 0.09);
+  --border-strong:oklch(from var(--carbon-900) l c h / 0.18);
+
+  /* Sombras */
+  --shadow-sm:   0 1px 2px oklch(0% 0 0 / 0.06);
+  --shadow:      0 2px 8px oklch(0% 0 0 / 0.08), 0 1px 3px oklch(0% 0 0 / 0.05);
+  --shadow-lift: 0 4px 16px oklch(0% 0 0 / 0.10), 0 1px 4px oklch(0% 0 0 / 0.06);
+  --shadow-modal:0 8px 32px oklch(0% 0 0 / 0.16), 0 2px 8px oklch(0% 0 0 / 0.08);
+
+  /* Tipografía */
+  --font-sans:    'Geist', 'GeistFallback', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-mono:    'Geist Mono', 'GeistMonoFallback', 'Fira Code', monospace;
+
+  /* Radios */
+  --radius-sm: 4px;
+  --radius:    6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Layout */
+  --sidebar-w:   224px;   /* 14rem */
+  --topbar-h:    48px;    /* 3rem  */
+}
