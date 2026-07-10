@@ -12,28 +12,34 @@ import { MunicipiosList } from '@/pages/municipios/MunicipiosList';
 import { FaunaList } from '@/pages/fauna/FaunaList';
 import { CulturaPage } from '@/pages/cultura/CulturaPage';
 
-export const router = createBrowserRouter([
-  {
-    element: <RootLayout />,
-    children: [
-      { path: '/auth/login', element: <LoginPage /> },
-      { path: '/auth/verify', element: <VerifyPage /> },
-      {
-        path: '/',
-        element: <AdminShell />,
-        children: [
-          { index: true, element: <Navigate to="/dashboard" replace /> },
-          { path: 'dashboard', element: <DashboardPage /> },
-          { path: 'negocios', element: <NegociosList /> },
-          { path: 'inbox', element: <InboxApprovals /> },
-          { path: 'metricas', element: <MetricasPage /> },
-          { path: 'usuarios', element: <UsuariosPage /> },
-          { path: 'municipios', element: <MunicipiosList /> },
-          { path: 'cultura', element: <CulturaPage /> },
-          { path: 'fauna', element: <FaunaList /> },
-        ],
-      },
-      { path: '*', element: <Navigate to="/dashboard" replace /> },
-    ],
-  },
-]);
+// Basename derivado del base de Vite: '/' en dev, '/admin' cuando se compila con ADMIN_BASE=/admin/
+const basename = import.meta.env.BASE_URL.replace(/\/+$/, '') || '/';
+
+export const router = createBrowserRouter(
+  [
+    {
+      element: <RootLayout />,
+      children: [
+        { path: '/auth/login', element: <LoginPage /> },
+        { path: '/auth/verify', element: <VerifyPage /> },
+        {
+          path: '/',
+          element: <AdminShell />,
+          children: [
+            { index: true, element: <Navigate to="/dashboard" replace /> },
+            { path: 'dashboard', element: <DashboardPage /> },
+            { path: 'negocios', element: <NegociosList /> },
+            { path: 'inbox', element: <InboxApprovals /> },
+            { path: 'metricas', element: <MetricasPage /> },
+            { path: 'usuarios', element: <UsuariosPage /> },
+            { path: 'municipios', element: <MunicipiosList /> },
+            { path: 'cultura', element: <CulturaPage /> },
+            { path: 'fauna', element: <FaunaList /> },
+          ],
+        },
+        { path: '*', element: <Navigate to="/dashboard" replace /> },
+      ],
+    },
+  ],
+  { basename }
+);
